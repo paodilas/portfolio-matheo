@@ -61,6 +61,7 @@ const observador = new IntersectionObserver((entradas) => {
 
 document.querySelectorAll('.revelar').forEach(item => observador.observe(item));
 
+const movimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const contadores = document.querySelectorAll('.contador');
 
 const olhoContador = new IntersectionObserver((entradas) => {
@@ -71,7 +72,12 @@ const olhoContador = new IntersectionObserver((entradas) => {
   });
 }, { threshold: 0.6 });
 
-contadores.forEach(contador => olhoContador.observe(contador));
+if (!movimentoReduzido) {
+  contadores.forEach(contador => {
+    contador.textContent = '0';
+    olhoContador.observe(contador);
+  });
+}
 
 function animarContador(elemento) {
   const alvo = Number(elemento.dataset.alvo);
@@ -113,7 +119,6 @@ function escrever() {
   setTimeout(escrever, espera);
 }
 
-const movimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!movimentoReduzido) {
   palavra.textContent = '';
   setTimeout(escrever, 700);
