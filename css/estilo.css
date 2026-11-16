@@ -432,7 +432,7 @@ section { scroll-margin-top: 76px; }
 
 .secao-contato { background: linear-gradient(200deg, var(--oceano) 0%, var(--noite) 100%); color: var(--prata-claro); }
 
-.contato-lista { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; margin-top: 26px; }
+.contato-lista { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 32px; margin-top: 26px; }
 .contato-lista li { display: flex; align-items: center; gap: 11px; font-size: 16px; }
 .contato-lista i { width: 22px; color: var(--ceu); font-size: 18px; }
 
@@ -609,7 +609,8 @@ section { scroll-margin-top: 76px; }
 @media (max-width: 575px) {
   .numero { font-size: 40px; }
   .formulario { padding: 26px 22px; }
-  .contato-lista { flex-direction: column; align-items: flex-start; width: fit-content; margin-left: auto; margin-right: auto; }
+  .contato-lista { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 14px; width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; }
+  .contato-lista li { max-width: 100%; overflow-wrap: anywhere; }
 }
 
 @media (prefers-reduced-motion: reduce) {
