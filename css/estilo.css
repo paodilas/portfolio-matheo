@@ -280,6 +280,8 @@ section { scroll-margin-top: 76px; }
 
 .texto-grande { font-size: 20px; font-weight: 300; margin-bottom: 20px; }
 
+#sobre .col-lg-8 { max-width: 720px; }
+
 #sobre p { color: var(--tinta-suave); margin-bottom: 18px; }
 #sobre .texto-grande { color: var(--tinta); }
 
@@ -404,7 +406,7 @@ section { scroll-margin-top: 76px; }
 
 .trabalho h3 { font-size: 23px; color: var(--branco); margin-bottom: 10px; }
 .trabalho p { font-size: 16px; color: rgba(232, 239, 247, 0.72); margin-bottom: 16px; }
-.trabalho a { color: var(--ceu); font-weight: 500; }
+.trabalho a { display: inline-block; padding: 8px 0; margin: -8px 0; color: var(--ceu); font-weight: 500; }
 .trabalho a i { font-size: 13px; margin-left: 4px; }
 .trabalho-nota { font-size: 14px; color: var(--prata); }
 .trabalho-nota i { margin-right: 6px; }
