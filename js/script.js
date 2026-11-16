@@ -27,6 +27,14 @@ abrirMenu.addEventListener('click', () => {
   abrirMenu.setAttribute('aria-expanded', aberta);
 });
 
+document.addEventListener('keydown', (evento) => {
+  if (evento.key === 'Escape' && navegacao.classList.contains('aberta')) {
+    navegacao.classList.remove('aberta');
+    abrirMenu.setAttribute('aria-expanded', 'false');
+    abrirMenu.focus();
+  }
+});
+
 links.forEach(link => {
   link.addEventListener('click', () => {
     navegacao.classList.remove('aberta');
