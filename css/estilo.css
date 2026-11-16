@@ -485,7 +485,6 @@ section { scroll-margin-top: 76px; }
 .contato-alternativo a:hover { color: var(--branco); }
 
 .sucesso {
-  display: none;
   margin-top: 18px;
   padding: 14px 18px;
   border-radius: 11px;
@@ -495,7 +494,8 @@ section { scroll-margin-top: 76px; }
   font-size: 15px;
 }
 
-.sucesso.visivel { display: block; animation: surgir 0.45s ease-out; }
+.sucesso:empty { margin: 0; padding: 0; border: 0; }
+.sucesso.visivel { animation: surgir 0.45s ease-out; }
 
 .rodape { padding: 44px 0 34px; background: var(--noite); color: var(--prata); }
 

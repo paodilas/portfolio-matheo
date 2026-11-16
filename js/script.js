@@ -142,6 +142,7 @@ filtros.forEach(botao => {
 
 const formulario = document.getElementById('formulario');
 const sucesso = document.getElementById('sucesso');
+let esconderSucesso;
 
 formulario.addEventListener('submit', (evento) => {
   evento.preventDefault();
@@ -156,7 +157,8 @@ formulario.addEventListener('submit', (evento) => {
   valido = validar(mensagem, 'erroMensagem', mensagem.value.trim().length >= 10, 'Conte um pouco mais, com pelo menos 10 letras.') && valido;
 
   if (!valido) {
-    sucesso.classList.remove('visivel');
+    limparSucesso();
+    formulario.querySelector('[aria-invalid="true"]').focus();
     return;
   }
 
@@ -167,13 +169,22 @@ formulario.addEventListener('submit', (evento) => {
   window.open('https://wa.me/5561992197635?text=' + encodeURIComponent(texto), '_blank', 'noopener');
 
   formulario.reset();
+  sucesso.textContent = 'Abrindo o WhatsApp com a sua mensagem.';
   sucesso.classList.add('visivel');
-  setTimeout(() => sucesso.classList.remove('visivel'), 6000);
+  clearTimeout(esconderSucesso);
+  esconderSucesso = setTimeout(limparSucesso, 6000);
 });
+
+function limparSucesso() {
+  clearTimeout(esconderSucesso);
+  sucesso.textContent = '';
+  sucesso.classList.remove('visivel');
+}
 
 function validar(campo, idErro, condicao, aviso) {
   const erro = document.getElementById(idErro);
   campo.parentElement.classList.toggle('invalido', !condicao);
+  campo.setAttribute('aria-invalid', !condicao);
   erro.textContent = condicao ? '' : aviso;
   return condicao;
 }
@@ -181,6 +192,7 @@ function validar(campo, idErro, condicao, aviso) {
 document.querySelectorAll('.campo input, .campo textarea').forEach(campo => {
   campo.addEventListener('input', () => {
     campo.parentElement.classList.remove('invalido');
+    campo.setAttribute('aria-invalid', 'false');
     const erro = campo.parentElement.querySelector('.erro');
     if (erro) erro.textContent = '';
   });

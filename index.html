@@ -327,22 +327,22 @@
         <form class="formulario" id="formulario" novalidate>
           <div class="campo">
             <label for="nome">Seu nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Como devo te chamar">
+            <input type="text" id="nome" name="nome" placeholder="Como devo te chamar" aria-describedby="erroNome">
             <span class="erro" id="erroNome"></span>
           </div>
           <div class="campo">
             <label for="email">Seu e-mail</label>
-            <input type="email" id="email" name="email" placeholder="nome@empresa.com.br">
+            <input type="email" id="email" name="email" placeholder="nome@empresa.com.br" aria-describedby="erroEmail">
             <span class="erro" id="erroEmail"></span>
           </div>
           <div class="campo">
             <label for="mensagem">O que você quer resolver</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva em poucas linhas o projeto ou o problema"></textarea>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva em poucas linhas o projeto ou o problema" aria-describedby="erroMensagem"></textarea>
             <span class="erro" id="erroMensagem"></span>
           </div>
           <button type="submit" class="botao-cheio botao-largo">Enviar pelo WhatsApp</button>
           <p class="contato-alternativo">Prefere e-mail? <a href="mailto:dreamysmcontato@gmail.com">Me escreva aqui</a></p>
-          <p class="sucesso" id="sucesso">Abrindo o WhatsApp com a sua mensagem.</p>
+          <p class="sucesso" id="sucesso" role="status"></p>
         </form>
       </div>
     </div>
