@@ -5,12 +5,20 @@ const voltar = document.getElementById('voltar');
 const links = document.querySelectorAll('.navegacao a[href^="#"]');
 const secoes = document.querySelectorAll('main section[id]');
 
+let esperandoQuadro = false;
+
 window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  topo.classList.toggle('fixado', y > 40);
-  voltar.classList.toggle('visivel', y > 500);
-  marcarLinkAtual(y);
-});
+  if (esperandoQuadro) return;
+  esperandoQuadro = true;
+
+  requestAnimationFrame(() => {
+    const y = window.scrollY;
+    topo.classList.toggle('fixado', y > 40);
+    voltar.classList.toggle('visivel', y > 500);
+    marcarLinkAtual(y);
+    esperandoQuadro = false;
+  });
+}, { passive: true });
 
 function marcarLinkAtual(y) {
   let atual = '';
