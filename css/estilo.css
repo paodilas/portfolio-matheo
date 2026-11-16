@@ -465,6 +465,10 @@ section { scroll-margin-top: 76px; }
 
 .erro { display: block; min-height: 18px; margin-top: 6px; font-size: 13px; color: #FFA4A4; }
 
+.contato-alternativo { margin-top: 16px; font-size: 14px; text-align: center; color: var(--prata); }
+.contato-alternativo a { color: var(--ceu); text-decoration: underline; text-underline-offset: 3px; }
+.contato-alternativo a:hover { color: var(--branco); }
+
 .sucesso {
   display: none;
   margin-top: 18px;

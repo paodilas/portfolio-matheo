@@ -139,6 +139,12 @@ formulario.addEventListener('submit', (evento) => {
     return;
   }
 
+  const texto = 'Olá Matheo, meu nome é ' + nome.value.trim() + '.\n' +
+    'E-mail: ' + email.value.trim() + '\n\n' +
+    mensagem.value.trim();
+
+  window.open('https://wa.me/5561992197635?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+
   formulario.reset();
   sucesso.classList.add('visivel');
   setTimeout(() => sucesso.classList.remove('visivel'), 6000);
