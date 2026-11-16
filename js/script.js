@@ -129,8 +129,12 @@ const projetos = document.querySelectorAll('.projeto');
 
 filtros.forEach(botao => {
   botao.addEventListener('click', () => {
-    filtros.forEach(outro => outro.classList.remove('ativo'));
+    filtros.forEach(outro => {
+      outro.classList.remove('ativo');
+      outro.setAttribute('aria-pressed', 'false');
+    });
     botao.classList.add('ativo');
+    botao.setAttribute('aria-pressed', 'true');
 
     const escolhido = botao.dataset.filtro;
     projetos.forEach(projeto => {

@@ -21,8 +21,8 @@
       <span class="marca-sinal"></span>
       Matheo Bagatini
     </a>
-    <button class="abrir-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
+    <button type="button" class="abrir-menu" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false">
+      <i aria-hidden="true" class="fa-solid fa-bars"></i>
     </button>
     <nav class="navegacao" id="navegacao">
       <a href="#sobre">Sobre</a>
@@ -61,14 +61,14 @@
       <div class="col-lg-5">
         <figure class="retrato">
           <div class="retrato-halo"></div>
-          <img src="img/matheo.jpg" alt="Retrato de Matheo Augustus Rocha Bagatini">
+          <img src="img/matheo.jpg" width="900" height="1125" alt="Retrato de Matheo Augustus Rocha Bagatini">
         </figure>
       </div>
     </div>
   </div>
 </section>
 
-<section class="numeros">
+<section class="numeros" aria-label="Números">
   <div class="container">
     <div class="row g-4">
       <div class="col-6 col-lg-3 revelar">
@@ -133,7 +133,7 @@
     </div>
     <div class="linha-tempo">
       <article class="marco revelar">
-        <div class="marco-ponto"><i class="fa-solid fa-landmark-dome"></i></div>
+        <div class="marco-ponto"><i aria-hidden="true" class="fa-solid fa-landmark-dome"></i></div>
         <div class="marco-corpo">
           <span class="marco-periodo">Câmara Legislativa do Distrito Federal</span>
           <h3>Comunicação digital e operações de campanha</h3>
@@ -145,7 +145,7 @@
         </div>
       </article>
       <article class="marco revelar">
-        <div class="marco-ponto"><i class="fa-solid fa-cubes"></i></div>
+        <div class="marco-ponto"><i aria-hidden="true" class="fa-solid fa-cubes"></i></div>
         <div class="marco-corpo">
           <span class="marco-periodo">Dreamy SM</span>
           <h3>Sócio fundador</h3>
@@ -157,7 +157,7 @@
         </div>
       </article>
       <article class="marco revelar">
-        <div class="marco-ponto"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="marco-ponto"><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div>
         <div class="marco-corpo">
           <span class="marco-periodo">Graduação em andamento</span>
           <h3>Engenharia de Software</h3>
@@ -180,28 +180,28 @@
     <div class="row g-4">
       <div class="col-md-6 col-xl-3 revelar">
         <div class="cartao">
-          <i class="fa-solid fa-bullseye cartao-icone"></i>
+          <i aria-hidden="true" class="fa-solid fa-bullseye cartao-icone"></i>
           <h3>Landing pages de venda</h3>
           <p>Página única, rápida e pensada para converter, com texto, estrutura e botões no lugar certo.</p>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 revelar">
         <div class="cartao">
-          <i class="fa-solid fa-layer-group cartao-icone"></i>
+          <i aria-hidden="true" class="fa-solid fa-layer-group cartao-icone"></i>
           <h3>Sistemas sob medida</h3>
           <p>Painéis, cadastros e fluxos internos construídos para o processo que a empresa já tem.</p>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 revelar">
         <div class="cartao">
-          <i class="fa-solid fa-robot cartao-icone"></i>
+          <i aria-hidden="true" class="fa-solid fa-robot cartao-icone"></i>
           <h3>Automação e agentes de IA</h3>
           <p>Atendimento, triagem e tarefas repetitivas resolvidas por agentes com instruções próprias.</p>
         </div>
       </div>
       <div class="col-md-6 col-xl-3 revelar">
         <div class="cartao">
-          <i class="fa-solid fa-rocket cartao-icone"></i>
+          <i aria-hidden="true" class="fa-solid fa-rocket cartao-icone"></i>
           <h3>Publicação e domínio</h3>
           <p>Repositório, deploy automático e domínio apontado. O projeto sai do notebook e vai para o ar.</p>
         </div>
@@ -217,59 +217,59 @@
       <h2 class="titulo titulo-claro">Entregas que estão rodando</h2>
     </div>
     <div class="filtros revelar" id="filtros">
-      <button class="filtro ativo" data-filtro="todos">Todos</button>
-      <button class="filtro" data-filtro="lp">Landing pages</button>
-      <button class="filtro" data-filtro="ia">Sistemas e IA</button>
-      <button class="filtro" data-filtro="inst">Institucional</button>
+      <button type="button" class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="filtro" data-filtro="lp" aria-pressed="false">Landing pages</button>
+      <button type="button" class="filtro" data-filtro="ia" aria-pressed="false">Sistemas e IA</button>
+      <button type="button" class="filtro" data-filtro="inst" aria-pressed="false">Institucional</button>
     </div>
     <div class="row g-4 justify-content-center" id="listaProjetos">
       <div class="col-md-6 projeto revelar" data-tipo="lp">
         <article class="trabalho">
-          <div class="trabalho-foto"><img src="img/projeto-blackvitalicia.jpg" alt="Landing page da Black Vitalícia"></div>
+          <div class="trabalho-foto"><img src="img/projeto-blackvitalicia.jpg" width="788" height="500" loading="lazy" alt="Landing page da Black Vitalícia"></div>
           <div class="trabalho-corpo">
             <span class="trabalho-tag">Landing page</span>
             <h3>Black Vitalícia</h3>
             <p>Página de vendas da oferta vitalícia da NATA CURSOS, publicada em domínio próprio e integrada ao funil da escola.</p>
             <a href="https://natacursos.com/blackvitalicia" target="_blank" rel="noopener">
-              Visitar a página <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Visitar a página <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
       </div>
       <div class="col-md-6 projeto revelar" data-tipo="ia">
         <article class="trabalho">
-          <div class="trabalho-foto"><img src="img/projeto-agentes.jpg" alt="Página do Escritório IA 3.0"></div>
+          <div class="trabalho-foto"><img src="img/projeto-agentes.jpg" width="788" height="505" loading="lazy" alt="Página do Escritório IA 3.0"></div>
           <div class="trabalho-corpo">
             <span class="trabalho-tag">Sistema e IA</span>
             <h3>Escritório IA 3.0</h3>
             <p>Equipe de agentes, skills e prompts contábeis para a NATA CURSOS, com página de venda e entrega própria e checkout integrado.</p>
             <a href="https://escritorio-ia-30-contabil.pages.dev" target="_blank" rel="noopener">
-              Visitar a página <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Visitar a página <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
       </div>
       <div class="col-md-6 projeto revelar" data-tipo="inst">
         <article class="trabalho">
-          <div class="trabalho-foto"><img src="img/projeto-dreamy.jpg" alt="Site institucional da Dreamy SM"></div>
+          <div class="trabalho-foto"><img src="img/projeto-dreamy.jpg" width="788" height="505" loading="lazy" alt="Site institucional da Dreamy SM"></div>
           <div class="trabalho-corpo">
             <span class="trabalho-tag">Institucional</span>
             <h3>Dreamy SM</h3>
             <p>Site institucional da minha empresa, construído em Astro com TypeScript e publicado com deploy automático a cada atualização.</p>
             <a href="https://www.dreamysm.com.br" target="_blank" rel="noopener">
-              Visitar o site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Visitar o site <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
       </div>
       <div class="col-md-6 projeto revelar" data-tipo="inst">
         <article class="trabalho">
-          <div class="trabalho-foto"><img src="img/projeto-jane.jpg" alt="Presença digital do gabinete da Dra. Jane Klébia"></div>
+          <div class="trabalho-foto"><img src="img/projeto-jane.jpg" width="1200" height="750" loading="lazy" alt="Presença digital do gabinete da Dra. Jane Klébia"></div>
           <div class="trabalho-corpo">
             <span class="trabalho-tag">Institucional</span>
             <h3>Delegada Doutora Jane</h3>
             <p>Site do mandato da Deputada Distrital, com as entregas por região, identidade visual aplicada às redes e atendimento ao cidadão.</p>
-            <span class="trabalho-nota"><i class="fa-solid fa-building-columns"></i> Projeto institucional</span>
+            <span class="trabalho-nota"><i aria-hidden="true" class="fa-solid fa-building-columns"></i> Projeto institucional</span>
           </div>
         </article>
       </div>
@@ -290,18 +290,18 @@
     </div>
     <div class="revelar">
       <div class="fichas">
-          <span class="ficha"><i class="fa-brands fa-html5"></i> HTML5</span>
-          <span class="ficha"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-          <span class="ficha"><i class="fa-brands fa-js"></i> JavaScript</span>
-          <span class="ficha"><i class="fa-brands fa-node-js"></i> Node.js</span>
-          <span class="ficha"><i class="fa-solid fa-server"></i> Express</span>
-          <span class="ficha"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-          <span class="ficha"><i class="fa-solid fa-code"></i> TypeScript</span>
-          <span class="ficha"><i class="fa-solid fa-meteor"></i> Astro</span>
-          <span class="ficha"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
-          <span class="ficha"><i class="fa-brands fa-git-alt"></i> Git</span>
-          <span class="ficha"><i class="fa-brands fa-github"></i> GitHub</span>
-          <span class="ficha"><i class="fa-solid fa-cloud"></i> Railway</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-solid fa-server"></i> Express</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-solid fa-database"></i> PostgreSQL</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-solid fa-code"></i> TypeScript</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-solid fa-meteor"></i> Astro</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-git-alt"></i> Git</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-brands fa-github"></i> GitHub</span>
+          <span class="ficha"><i aria-hidden="true" class="fa-solid fa-cloud"></i> Railway</span>
       </div>
     </div>
   </div>
@@ -317,9 +317,9 @@
         e um valor. Sem reunião obrigatória e sem proposta de trinta páginas.
       </p>
       <ul class="contato-lista">
-        <li><i class="fa-brands fa-whatsapp"></i> (61) 99219-7635</li>
-        <li><i class="fa-regular fa-envelope"></i> dreamysmcontato@gmail.com</li>
-        <li><i class="fa-solid fa-globe"></i> www.dreamysm.com.br</li>
+        <li><i aria-hidden="true" class="fa-brands fa-whatsapp"></i> (61) 99219-7635</li>
+        <li><i aria-hidden="true" class="fa-regular fa-envelope"></i> dreamysmcontato@gmail.com</li>
+        <li><i aria-hidden="true" class="fa-solid fa-globe"></i> www.dreamysm.com.br</li>
       </ul>
     </div>
     <div class="row">
@@ -359,17 +359,17 @@
         <p class="rodape-dado">RGM 47322292 · Engenharia de Software</p>
       </div>
       <div class="rodape-redes">
-        <a href="https://github.com/paodilas" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://wa.me/5561992197635" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:dreamysmcontato@gmail.com" aria-label="E-mail"><i class="fa-regular fa-envelope"></i></a>
-        <a href="https://www.dreamysm.com.br" target="_blank" rel="noopener" aria-label="Site da Dreamy SM"><i class="fa-solid fa-globe"></i></a>
+        <a href="https://github.com/paodilas" target="_blank" rel="noopener" aria-label="GitHub"><i aria-hidden="true" class="fa-brands fa-github"></i></a>
+        <a href="https://wa.me/5561992197635" target="_blank" rel="noopener" aria-label="WhatsApp"><i aria-hidden="true" class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:dreamysmcontato@gmail.com" aria-label="E-mail"><i aria-hidden="true" class="fa-regular fa-envelope"></i></a>
+        <a href="https://www.dreamysm.com.br" target="_blank" rel="noopener" aria-label="Site da Dreamy SM"><i aria-hidden="true" class="fa-solid fa-globe"></i></a>
       </div>
     </div>
     <p class="rodape-fim">&copy; 2026 Todos os direitos pertencentes a Matheo Augustus Rocha Bagatini</p>
   </div>
 </footer>
 
-<a class="voltar" id="voltar" href="#inicio" aria-label="Voltar ao início"><i class="fa-solid fa-arrow-up"></i></a>
+<a class="voltar" id="voltar" href="#inicio" aria-label="Voltar ao início"><i aria-hidden="true" class="fa-solid fa-arrow-up"></i></a>
 
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
